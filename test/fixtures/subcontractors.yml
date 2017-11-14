@@ -1,0 +1,57 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  subcontractor_number: 1
+  owner: MyString
+  address_1: MyString
+  address_2: MyString
+  city_state_zip: MyString
+  phone_1: 1
+  phone_2: 1
+  email_address: MyString
+  division: MyString
+  route: MyString
+  active: false
+  business_license: MyString
+  federal_number: MyString
+  sca_rec: MyString
+  sca_exp: 
+  lwa_rec: MyString
+  Nsqc_rec: MyString
+  psqc: MyString
+  bookkeeper: MyString
+  lettstat: MyString
+  chk_acct: MyString
+  liability_carrier: MyString
+  liability_expiration: MyString
+  wcmp_car: MyString
+  wcmp_exp: MyString
+
+two:
+  name: MyString
+  subcontractor_number: 1
+  owner: MyString
+  address_1: MyString
+  address_2: MyString
+  city_state_zip: MyString
+  phone_1: 1
+  phone_2: 1
+  email_address: MyString
+  division: MyString
+  route: MyString
+  active: false
+  business_license: MyString
+  federal_number: MyString
+  sca_rec: MyString
+  sca_exp: 
+  lwa_rec: MyString
+  Nsqc_rec: MyString
+  psqc: MyString
+  bookkeeper: MyString
+  lettstat: MyString
+  chk_acct: MyString
+  liability_carrier: MyString
+  liability_expiration: MyString
+  wcmp_car: MyString
+  wcmp_exp: MyString

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171114194721) do
+ActiveRecord::Schema.define(version: 20171114232849) do
 
   create_table "accounts", force: :cascade do |t|
     t.string "name"
@@ -55,6 +55,25 @@ ActiveRecord::Schema.define(version: 20171114194721) do
     t.boolean "contracted_services_windows"
     t.boolean "contracted_services_grandopening"
     t.boolean "contracted_services_halfstrip"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "employees", force: :cascade do |t|
+    t.string "name"
+    t.integer "employee_number"
+    t.integer "route_number"
+    t.integer "subcenter_number"
+    t.string "address"
+    t.string "city"
+    t.integer "phone_number"
+    t.string "email_address"
+    t.string "ups"
+    t.string "division"
+    t.string "hire_date"
+    t.string "last_day"
+    t.integer "ssn"
+    t.string "license_number"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -104,6 +123,37 @@ ActiveRecord::Schema.define(version: 20171114194721) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["account_id"], name: "index_stores_on_account_id"
+  end
+
+  create_table "subcontractors", force: :cascade do |t|
+    t.string "name"
+    t.integer "subcontractor_number"
+    t.string "owner"
+    t.string "address_1"
+    t.string "address_2"
+    t.string "city_state_zip"
+    t.integer "phone_1"
+    t.integer "phone_2"
+    t.string "email_address"
+    t.string "division"
+    t.string "route"
+    t.boolean "active"
+    t.string "business_license"
+    t.string "federal_number"
+    t.string "sca_rec"
+    t.string "sca_exp"
+    t.string "lwa_rec"
+    t.string "Nsqc_rec"
+    t.string "psqc"
+    t.string "bookkeeper"
+    t.string "lettstat"
+    t.string "chk_acct"
+    t.string "liability_carrier"
+    t.string "liability_expiration"
+    t.string "wcmp_car"
+    t.string "wcmp_exp"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
