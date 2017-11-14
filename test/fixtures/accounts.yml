@@ -1,0 +1,69 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  account_number: MyString
+  code: MyString
+  active: false
+  address_1: MyString
+  address_2: MyString
+  city: MyString
+  phone_number: MyString
+  fax_number: MyString
+  contact_1: MyString
+  contact_1_title: MyString
+  contact_1_phone: 
+  contact_1_email: MyString
+  contact_2: MyString
+  contact_2_title: MyString
+  contact_2_phone: 
+  contact_2_email: MyString
+  contact_3: MyString
+  contact_3_title: MyString
+  contact_3_phone: 
+  contact_3_email: MyString
+  accounts_payable_address_1: MyString
+  accounts_payable_address_2: MyString
+  accounts_payable_city: MyString
+  accounts_payable_attn: MyString
+  accounts_payable_contact_1: MyString
+  accounts_payable_contact_1_phone: 
+  accounts_payable_contact_1_fax: 
+  accounts_payable_contact_1_email: MyString
+  accounts_payable_contact_2: MyString
+  accounts_payable_contact_2_phone: 
+  accounts_payable_contact_email: MyString
+
+two:
+  name: MyString
+  account_number: MyString
+  code: MyString
+  active: false
+  address_1: MyString
+  address_2: MyString
+  city: MyString
+  phone_number: MyString
+  fax_number: MyString
+  contact_1: MyString
+  contact_1_title: MyString
+  contact_1_phone: 
+  contact_1_email: MyString
+  contact_2: MyString
+  contact_2_title: MyString
+  contact_2_phone: 
+  contact_2_email: MyString
+  contact_3: MyString
+  contact_3_title: MyString
+  contact_3_phone: 
+  contact_3_email: MyString
+  accounts_payable_address_1: MyString
+  accounts_payable_address_2: MyString
+  accounts_payable_city: MyString
+  accounts_payable_attn: MyString
+  accounts_payable_contact_1: MyString
+  accounts_payable_contact_1_phone: 
+  accounts_payable_contact_1_fax: 
+  accounts_payable_contact_1_email: MyString
+  accounts_payable_contact_2: MyString
+  accounts_payable_contact_2_phone: 
+  accounts_payable_contact_email: MyString

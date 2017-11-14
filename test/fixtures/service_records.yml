@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  store: MyString
+  date: MyString
+  manager: MyString
+  service_type: MyString
+  report_in: false
+  comments: MyText
+  account: one
+
+two:
+  store: MyString
+  date: MyString
+  manager: MyString
+  service_type: MyString
+  report_in: false
+  comments: MyText
+  account: two
