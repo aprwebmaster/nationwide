@@ -1,2 +1,180 @@
-<h1>Accounts#new</h1>
-<p>Find me in app/views/accounts/new.html.erb</p>
+ <h1>Create New Account</h1>
+
+<div class="row">
+	<div class="col-md-4">
+		<p> Please fill out form completely and accurately. </p>
+		<p> If any issues saving accounts are experienced, please contact your web developer </p>
+	</div>
+
+	<div class="col-md-8">
+ <%= form_for @account do |f| %>
+ 	<div class="form-group">
+   <%= f.label "Account Name" %>
+   <%= f.text_field :name, class: 'form-control', placeholder: "Enter Account Name" %>
+    </div>
+    <div class="form-group">
+    <%= f.label "Account Number" %>
+    <%= f.text_field :account_number %>
+	</div>
+    <div class="form-group">
+    <%= f.label "Code" %>
+    <%= f.text_field :code %>
+    </div>
+    <div class="form-group">
+    <%= f.label "Active?" %>
+    <%= f.check_box :active %>
+	</div>
+    <div class="form-group">
+    <%= f.label "Address 1" %>
+    <%= f.text_field :address_1 %>
+	</div> 
+	<div class="form-group">
+    <%= f.label "Address 2" %>
+    <%= f.text_field :address_2 %>
+    </div>
+    <div class="form-group">
+   <%= f.label "City" %>
+   <%= f.text_field :city %>
+    </div>
+    <div class="form-group">
+   <%= f.label "Phone Number" %>
+   <%= f.text_field :phone_number %>
+    </div>
+    <div class="form-group">
+    <%= f.label "Fax Number" %>
+   <%= f.text_field :fax_number %>
+   </div>
+   <div class="form-group">
+   <%= f.label "Website" %>
+   <%= f.text_field :website %>
+   </div>
+   <div class="form-group">
+   <%= f.label "Primary Contact"%>
+   <%= f.text_field :contact_1 %>
+   </div>
+   <div class="form-group">
+   <%= f.label "Title" %>
+   <%= f.text_field :contact_1_title %>
+	</div>
+	<div class="form-group"> 
+   <%= f.label "Phone" %>
+   <%= f.text_field :contact_1_phone %>
+	</div>
+	<div class="form-group">
+   <%= f.label "Email" %>
+   <%= f.text_field :contact_1_email %>
+	</div>
+	<div class="form-group">
+   <%= f.label "Contact" %>
+   <%= f.text_field :contact_2 %>
+    </div>
+    <div class="form-group">
+   <%= f.label "Title" %>
+   <%= f.text_field :contact_2_title %>
+	</div>
+	<div class="form-group">
+   <%= f.label "Phone" %>
+   <%= f.text_field :contact_2_phone %>
+	</div>
+	<div class="form-group">
+   <%= f.label "Email" %>
+   <%= f.text_field :contact_2_email %>
+	</div>
+	<div class="form-group">
+   <%= f.label "Contact" %>
+   <%= f.text_field :contact_3 %>
+   </div>
+   <div class="form-group">
+   <%= f.label "Title" %>
+   <%= f.text_field :contact_3_title %>
+	</div>
+	<div class="form-group">
+   <%= f.label "Phone" %>
+   <%= f.text_field :contact_3_phone %>
+   </div>
+   <div class="form-group">
+   <%= f.label "Email" %>
+   <%= f.text_field :contact_3_email %>
+   </div>
+   <div class="form-group">
+   <%= f.label "Accounts Payable Address 1" %>
+   <%= f.text_field :accounts_payable_address_1 %>
+   </div>
+   <div class="form-group">
+   <%= f.label "Accounts Payable Address 2" %>
+   <%= f.text_field :accounts_payable_address_2 %>
+   </div>
+   <div class="form-group">
+   <%= f.label "Accounts Payable City" %>
+   <%= f.text_field :accounts_payable_city %>
+   </div>
+   <div class="form-group">
+   <%= f.label "Attn" %>
+   <%= f.text_field :accounts_payable_attn %>
+	</div>
+	<div class="form-group">
+   <%= f.label "Accounts Payable Primary Contact" %>
+   <%= f.text_field :accounts_payable_contact_1 %>
+    </div>
+    <div class="form-group">
+   <%= f.label "Accounts Payable Primary Contact Phone Number" %>
+   <%= f.text_field :accounts_payable_contact_1_phone %>
+   </div>
+   <div class="form-group">
+   <%= f.label "Accounts Payable Primary Contact Fax Number" %>
+   <%= f.text_field :accounts_payable_contact_1_fax %>
+	</div>
+	<div class="form-group">
+   <%= f.label "Accounts Payable Primary Contact Email" %>
+   <%= f.text_field :accounts_payable_contact_1_email %>
+	</div>
+	<div class="form-group">
+   <%= f.label "Accounts Payable Secondary Contact" %>
+   <%= f.text_field :accounts_payable_contact_2 %>
+   </div>
+   <div class="form-group">
+   <%= f.label "Accounts Payable Secondary Contact Phone Number" %>
+   <%= f.text_field :accounts_payable_contact_2_phone %>
+	</div>
+	
+
+   <h4>Contracted Services</h4>
+   	<div class="form-group">
+    <%= f.label "Basic" %>
+    <%= f.check_box :contracted_services_basic %>
+    </div>
+    <div class="form-group">
+    <%= f.label "Strip" %>
+    <%= f.check_box :contracted_services_strip %>
+	</div>
+	<div class="form-group">
+    <%= f.label "Backstrip" %>
+    <%= f.check_box :contracted_services_backstrip %>
+	</div>
+	<div class="form-group">
+    <%= f.label "Extraction" %>
+    <%= f.check_box :contracted_services_extraction %>
+	</div>
+	<div class="form-group">
+    <%= f.label "Scrub" %>
+    <%= f.check_box :contracted_services_scrub %>
+	</div>
+	<div class="form-group">
+    <%= f.label "Buff" %>
+    <%= f.check_box :contracted_services_buff %>
+	</div>
+	<div class="form-group">
+    <%= f.label "Windows" %>
+    <%= f.check_box :contracted_services_windows %>
+	</div>
+	<div class="form-group">
+    <%= f.label "Grand Opening" %>
+    <%= f.check_box :contracted_services_grandopening %>
+	</div>
+	<div class="form-group">
+    <%= f.label "Half Strip" %>
+    <%= f.check_box :contracted_services_halfstrip %>
+ 	</div>
+ 	<div class="form-group">
+   <%= f.submit "Save", class: 'btn btn-success' %>
+ <% end %>
