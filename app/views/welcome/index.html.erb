@@ -1,2 +1,26 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<br>
+<div class="jumbotron">
+<center>
+  <h2>Nationwide Building Maintenance</h2>
+  <p>This is Nationwide's business management software.</p>
+  <p>
+      <%= link_to "Sign In", new_user_session_path, class: 'btn btn-primary' %> or
+      <%= link_to "Sign Up", new_user_registration_path, class: 'btn btn-primary' %>
+  </p>
+</center>
+</div>
+
+<div class="row">
+  <div class="col-md-4">
+    <h2>Manage Accounts</h2>
+    <p>If you are a Nationwide Employee you can add and edit accounts and view account information here.</p>
+  </div>
+  <div class="col-md-4">
+    <h2>View Vendor Information</h2>
+    <p>If you are a subcontractor you'll be able to view information on your accounts to help you manage them successfully.</p>
+  </div>
+  <div class="col-md-4">
+    <h2>Calendar Information</h2>
+    <p>See what services are scheduled for you client accounts.</p>
+  </div>
+</div>
