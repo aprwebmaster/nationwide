@@ -1,13 +1,9 @@
 Rails.application.routes.draw do
  
   devise_for :users
-  get 'service_comments/index'
+ 
 
-  get 'service_comments/show'
-
-  get 'service_comments/new'
-
-  get 'service_comments/edit'
+  resources :service_comments
 
   resources :accounts
 
