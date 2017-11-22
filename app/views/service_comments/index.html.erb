@@ -1,2 +1,14 @@
-<h1>ServiceComments#index</h1>
-<p>Find me in app/views/service_comments/index.html.erb</p>
+ <h1>All Service Comments</h1>
+ <% @service_comments.each do |service_comment| %>
+   <div class="media">
+     <div class="media-body">
+       <h4 class="media-heading">
+         <%= link_to service_comment.store, service_comment %>
+       </h4>
+     </div>
+   </div>
+   <% end %>
+
+
+
+   

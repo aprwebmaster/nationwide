@@ -1,6 +1,6 @@
 class ServiceCommentsController < ApplicationController
   def index
-  	@service_comments = ServiceComments.all 
+  	@service_comments = ServiceComment.all 
   end
 
   def show
