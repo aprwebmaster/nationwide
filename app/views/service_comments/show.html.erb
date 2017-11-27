@@ -1,2 +1,10 @@
 <h2> Store: <%= @service_comment.store %></h2>
 <p><%= @service_comment.body %></p>
+
+
+<%= link_to "Edit", edit_service_comment_path(@service_comment), class: 'btn btn-success' %>
+
+<p><h5>Comment Date:</h5> <%= @service_comment.date %></p>
+<p><h5>Contacted Manager:</h5> <%= @service_comment.contacted_manager %></p>
+<p><h5>Store Manager:</h5> <%= @service_comment.store_manager %></p>
+<p><h5>Comment Text:</h5> <%= @service_comment.body %></p>

@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   resources :accounts
 
 
-  get 'about' => 'welcome#about'
+
 
   root to: 'welcome#index'
 

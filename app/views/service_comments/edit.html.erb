@@ -1,2 +1,34 @@
-<h1>ServiceComments#edit</h1>
-<p>Find me in app/views/service_comments/edit.html.erb</p>
+<h1>Edit Service Comments </h1>
+<div class="row">
+	<div class="col-md-4">
+		<p> Please fill out form completely and accurately. </p>
+		<p> If any issues saving comments are experienced, please contact your web developer. </p>
+	</div>
+
+	<div class="col-md-8">
+ <%= form_for @account do |f| %>
+ 	<div class="form-group">
+   <%= f.label "Store" %>
+   <%= f.text_field :store, class: 'form-control', placeholder: "Enter Store Name" %>
+    </div>
+    <div class="form-group">
+    <%= f.label "Date" %>
+    <%= f.text_field :date %>
+	</div>
+    <div class="form-group">
+    <%= f.label "Contacted Manager" %>
+    <%= f.text_field :contacted_manager %>
+    </div>
+    <div class="form-group">
+    <%= f.label "Store Manager" %>
+    <%= f.check_box :store_manager %>
+	</div>
+    <div class="form-group">
+    <%= f.label "Please enter your Comment" %>
+    <%= f.text_area :body %>
+	</div> 
+	
+ 	<div class="form-group">
+   <%= f.submit "Save", class: 'btn btn-success' %>
+ 	<% end %>
+	</div>
