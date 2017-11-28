@@ -2,10 +2,10 @@ Rails.application.routes.draw do
  
   devise_for :users
  
-
-  resources :service_comments
-
-  resources :accounts
+  resources :accounts do
+  	resources :service_comments do
+  	end
+  end
 
 
 

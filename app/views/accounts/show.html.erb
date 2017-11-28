@@ -43,3 +43,14 @@
 <p><h5>Windows?</h5> <%= @account.contracted_services_windows %></p>
 <p><h5>Grand Opening?</h5> <%= @account.contracted_services_grandopening %></p>
 <p><h5>Half Strip?</h5> <%= @account.contracted_services_halfstrip %></p>
+
+
+ </br>
+ 
+ <div class="row">
+   <h2>Comments</h2>
+   <div class='col-md-12'>
+     <%= render @service_comments %>
+     <%= render 'service_comments/form', service_comment: @service_comment, account: @account %>
+   </div>
+ </div>

@@ -1,0 +1,14 @@
+
+
+   <% if service_comment.account %>
+   <div>
+	 <p><h5>Comment Date:</h5> <%= service_comment.date %></p>
+	 <p><h5>Contacted Manager:</h5> <%= service_comment.contacted_manager %></p>
+	 <p><h5>Is this the Store Manager?:</h5> <%= service_comment.store_manager ? "Yes" : "No" %></p>
+	 <p><h5>Comment:</h5> <%= service_comment.body %></p>
+     <small>
+       <em><%= service_comment.account.name || service_comment.account.email %> </em>
+     </small>
+   <% end %>
+   <hr/>
+ </div>
