@@ -25,8 +25,22 @@ class ServiceCommentsController < ApplicationController
   end
 
 
+  
   def edit
+
   end
+
+  def destroy
+    @account = Account.find(params[:account_id])
+    @service_comment = @account.service_comments.find(params[:id])
+  if @service_comment.destroy 
+    flash[:notice] = "Comment was deleted successfully."
+    redirect_to @account
+  else
+    flash[:error] = "There was an error deleting this comment. Please try again."
+    redirect_to @account
+  end
+end
 
   private 
 

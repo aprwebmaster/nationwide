@@ -54,4 +54,16 @@ class AccountsController < ApplicationController
   end
 end
 
+def destroy
+  @account = Account.find(params[:id])
+
+  if @account.destroy 
+    flash[:notice] = "\"#{@account.name}\" was deleted successfully."
+    redirect_to accounts_path 
+  else
+    flash[:error] = "There was an error deleting this account. Please try again."
+    render :show
+  end
+end
+
 end
