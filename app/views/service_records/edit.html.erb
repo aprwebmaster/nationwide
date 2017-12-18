@@ -1,0 +1,38 @@
+<h1>Create New Service Record </h1>
+<div class="row">
+	<div class="col-md-4">
+		<p> Please fill out form completely and accurately. </p>
+		<p> If any issues saving service records are experienced, please contact your web developer. </p>
+	</div>
+
+	<div class="col-md-8">
+ <%= form_for @account do |f| %>
+ 	<div class="form-group">
+   <%= f.label "Store" %>
+   <%= f.text_field :store, class: 'form-control', placeholder: "Enter Store Name" %>
+    </div>
+    <div class="form-group">
+    <%= f.label "Date" %>
+    <%= f.text_field :date %>
+	</div>
+    <div class="form-group">
+    <%= f.label "Manager" %>
+    <%= f.text_field :manager %>
+    </div>
+    <div class="form-group">
+    <%= f.label "Service Type" %>
+    <%= f.text_field :service_type %>
+	</div>
+	<div class="form-group">
+    <%= f.label "Service Type" %>
+    <%= f.check_box :report_in %>
+	</div>
+    <div class="form-group">
+    <%= f.label "Please enter the text for your service record." %>
+    <%= f.text_area :body %>
+	</div> 
+	
+ 	<div class="form-group">
+   <%= f.submit "Save", class: 'btn btn-success' %>
+ 	<% end %>
+	</div>

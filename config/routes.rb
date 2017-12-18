@@ -7,6 +7,10 @@ Rails.application.routes.draw do
   	end
   end
 
+  resources :accounts do 
+    resources :service_records do
+    end
+  end
 
 
 

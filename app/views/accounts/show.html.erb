@@ -55,3 +55,13 @@
      <%= render 'service_comments/form', service_comment: @service_comment, account: @account %>
    </div>
  </div>
+
+ </br>
+ 
+ <div class="row">
+   <h2>Service Records</h2>
+   <div class='col-md-12'>
+   	 <%= render @service_records %>
+     <%= render 'service_records/form', service_record: @service_record, account: @account %>
+   </div>
+ </div>

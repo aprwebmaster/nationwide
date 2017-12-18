@@ -1,0 +1,10 @@
+<h1>All Service Records</h1>
+ <% @service_records.each do |service_record| %>
+   <div class="media">
+     <div class="media-body">
+       <h4 class="media-heading">
+         <%= link_to service_record.store, service_record %>
+       </h4>
+     </div>
+   </div>
+   <% end %>

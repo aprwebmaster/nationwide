@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
  require 'faker'
  
- # Create Posts
+ # Create Accounts 
  5.times do
    Account.create!(
      name: Faker::Name.name_with_middle,
@@ -68,6 +68,17 @@
    )
  end
  
+ 10.times do
+   ServiceRecord.create!(
+     account: accounts.sample,
+     body: Faker::Lorem.paragraph,
+     store: Faker::Lorem.words,
+     date: Faker::Date.forward(23),
+     report_in: Faker::Boolean.boolean,
+     manager: Faker::Name.name_with_middle
+   )
+ end
  puts "Seed finished"
  puts "#{Account.count} accounts created"
  puts "#{ServiceComment.count} comments created"
+ puts "#{ServiceRecord.count} service records created"

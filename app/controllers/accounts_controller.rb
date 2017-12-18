@@ -7,6 +7,8 @@ class AccountsController < ApplicationController
   	@account = Account.find(params[:id])
     @service_comments = @account.service_comments
     @service_comment = @account.service_comments.build 
+    @service_records = @account.service_records
+    @service_record = @account.service_records.build 
 
   end
 
