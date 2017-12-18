@@ -2,7 +2,7 @@
    <div>
    	<%= link_to "Delete Service Record", [@account, service_record], method: :delete, class: 'btn btn-danger', data: { confirm: 'Are you sure you want to delete this service record?' } %>
    	 <h2> Store: <%= service_record.store %></h2>
-      <p><%= service_comment.body %></p>
+      <p><%= service_record.body %></p>
 
       <p><h5>Service Record Date:</h5> <%= service_record.date %></p>
       <p><h5>Manager:</h5> <%= service_record.manager %></p>
