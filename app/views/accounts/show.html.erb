@@ -1,4 +1,6 @@
 
+<div class="row">
+<div>
 <h2> Account Name: <%= @account.name %></h2>
 
 <%= link_to "Edit", edit_account_path(@account), class: 'btn btn-success' %>
@@ -35,33 +37,33 @@
 <p><h5>Phone:</h5> <%= @account.accounts_payable_contact_2_phone %></p>
 <p><h5>Email:</h5> <%= @account.accounts_payable_contact_email %></p>
 <h3> Services</h3>
-<p><h5>Basic?</h5> <%= @account.contracted_services_basic %></p>
-<p><h5>Strip?</h5> <%= @account.contracted_services_strip %></p>
-<p> <h5>Backstrip?</h5> <%= @account.contracted_services_backstrip %></p>
-<p><h5>Extraction?</h5> <%= @account.contracted_services_extraction %></p>
-<p><h5>Scrub?</h5> <%= @account.contracted_services_scrub %></p>
-<p><h5>Buff?</h5> <%= @account.contracted_services_buff %></p>
-<p><h5>Windows?</h5> <%= @account.contracted_services_windows %></p>
-<p><h5>Grand Opening?</h5> <%= @account.contracted_services_grandopening %></p>
-<p><h5>Half Strip?</h5> <%= @account.contracted_services_halfstrip %></p>
-
-
- </br>
+<p><h5>Basic?</h5> <%= @account.contracted_services_basic ? "yes" : "no" %></p>
+<p><h5>Strip?</h5> <%= @account.contracted_services_strip ? "yes" : "no" %></p>
+<p> <h5>Backstrip?</h5> <%= @account.contracted_services_backstrip ? "yes" : "no" %></p>
+<p><h5>Extraction?</h5> <%= @account.contracted_services_extraction ? "yes" : "no" %></p>
+<p><h5>Scrub?</h5> <%= @account.contracted_services_scrub ? "yes" : "no" %></p>
+<p><h5>Buff?</h5> <%= @account.contracted_services_buff ? "yes" : "no" %></p>
+<p><h5>Windows?</h5> <%= @account.contracted_services_windows ? "yes" : "no" %></p>
+<p><h5>Grand Opening?</h5> <%= @account.contracted_services_grandopening ? "yes" : "no" %></p>
+<p><h5>Half Strip?</h5> <%= @account.contracted_services_halfstrip ? "yes" : "no" %></p>
+</div>
+  <div >
  
- <div class="row">
    <h2>Comments</h2>
-   <div class='col-md-12'>
+  
      <%= render @service_comments %>
      <%= render 'service_comments/form', service_comment: @service_comment, account: @account %>
-   </div>
- </div>
+  
+  </div>
 
- </br>
- 
- <div class="row">
+
+  <div >
+
    <h2>Service Records</h2>
-   <div class='col-md-12'>
+   
    	 <%= render @service_records %>
      <%= render 'service_records/form', service_record: @service_record, account: @account %>
-   </div>
- </div>
+    </div>
+ 
+
+</div>
