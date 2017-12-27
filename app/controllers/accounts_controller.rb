@@ -1,13 +1,13 @@
 class AccountsController < ApplicationController
   def index
-  	@accounts = Account.all 
+    @accounts = Account.order(:name).paginate(page: params[:page], per_page: 10)
   end
 
   def show
   	@account = Account.find(params[:id])
-    @service_comments = @account.service_comments
+    @service_comments = @account.service_comments.paginate(page: params[:page], per_page: 5).order('created_at DESC')
     @service_comment = @account.service_comments.build 
-    @service_records = @account.service_records
+    @service_records = @account.service_records.paginate(page: params[:page], per_page: 5).order('created_at DESC')
     @service_record = @account.service_records.build 
 
   end

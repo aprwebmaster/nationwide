@@ -1,7 +1,7 @@
 <h1>All Accounts</h1>
-
-<p><%= link_to '<button type="button">Create New Account</button>'.html_safe, new_account_path %></p>
-
+<br>
+<p><%= link_to '<button type="button" class="btn btn-default">Create New Account</button>'.html_safe, new_account_path %></p>
+<br>
 <% @accounts.each do |account| %>
   
   <div class="media">
@@ -12,3 +12,4 @@
      </div>
    </div>
 <% end %>
+<%= will_paginate @accounts %>
