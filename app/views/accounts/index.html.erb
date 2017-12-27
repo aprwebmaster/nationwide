@@ -1,4 +1,7 @@
 <h1>All Accounts</h1>
+
+<p><%= link_to '<button type="button">Create New Account</button>'.html_safe, new_account_path %></p>
+
 <% @accounts.each do |account| %>
   
   <div class="media">
