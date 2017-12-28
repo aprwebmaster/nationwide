@@ -1,6 +1,8 @@
 <% if service_record.account %>
    <div>
+    <% if policy(Account.new).create? %>
    	<%= link_to "Delete Service Record", [@account, service_record], method: :delete, class: 'btn btn-danger', data: { confirm: 'Are you sure you want to delete this service record?' } %>
+    <% end %>
    	 <h5> Store: <%= service_record.store %></h5>
       <p><h5>Service Record Date:</h5> <%= service_record.date %></p>
       <p><h5>Manager:</h5> <%= service_record.manager %></p>

@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
  
   devise_for :users
+  resources :users, only: [:update]
  
   resources :accounts do
   	resources :service_comments do

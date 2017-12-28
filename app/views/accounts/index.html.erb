@@ -1,6 +1,8 @@
 <h1>All Accounts</h1>
 <br>
+<% if policy(Account.new).create? %>
 <p><%= link_to '<button type="button" class="btn btn-default">Create New Account</button>'.html_safe, new_account_path %></p>
+<% end %> 
 <br>
 <% @accounts.each do |account| %>
   
