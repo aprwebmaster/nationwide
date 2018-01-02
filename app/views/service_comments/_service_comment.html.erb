@@ -2,7 +2,7 @@
 
    <% if service_comment.account %>
    <div>
-    <% if policy(Account.new).create? %>
+    <% if policy(Account.new).destroy? %>
    	<%= link_to "Delete Comment", [@account, service_comment], method: :delete, class: 'btn btn-danger', data: { confirm: 'Are you sure you want to delete this comment?' } %>
     <% end %>
    	 <p><h5>Comment Store:</h5> <%= service_comment.store %> </p>

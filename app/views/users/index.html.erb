@@ -1,0 +1,14 @@
+<h1>All Users</h1>
+
+<br>
+<% @users.each do |user| %>
+  
+  <div class="media">
+     <div class="media-body">
+       <h4 class="media-heading">
+         <p><%= link_to user.name, user_path(user.id) %></p>
+       </h4>
+     </div>
+   </div>
+<% end %>
+<%= will_paginate @users %>
