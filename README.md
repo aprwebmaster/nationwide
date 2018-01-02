@@ -14,5 +14,12 @@ Managed from this account on git:
 
 https://github.com/aprwebmaster 
 
+Developed by:
+Christopher Bradford, Software Administrator 
+email: cbradford@apr.com 
+
+Please contact with bugs, errors or feature requests. 
+
+
 
 
