@@ -1,0 +1,36 @@
+
+<div class="row">
+<div>
+<h2> Subcontractor Name: <%= @subcontractor.name %></h2>
+<% if policy(Account.new).create? %>
+<%= link_to "Edit", edit_subcontractor_path(@subcontractor), class: 'btn btn-success' %>
+<% end %>
+<% if policy(Account.new).destroy? %>
+ <%= link_to "Delete Subcontractor", @subcontractor, method: :delete, class: 'btn btn-danger', data: { confirm: 'Are you sure you want to delete this subcontractor?' } %>
+<% end %> 
+<p><h5>Subcontractor Number:</h5> <%= @subcontractor.subcontractor_number %></p>
+<p><h5>Address 1:</h5> <%= @subcontractor.address_1 %></p>
+<p><h5>Address 2:</h5> <%= @subcontractor.address_2 %></p>
+<p><h5>City, State, and Zipcode:</h5> <%= @subcontractor.city_state_zip %></p>
+<p><h5>Primary Phone Number:</h5> <%= @subcontractor.phone_1 %></p>
+<p><h5>Secondary Phone Number:</h5> <%= @subcontractor.phone_2 %></p>
+<p><h5>Email Address:</h5> <%= @subcontractor.email_address %></p>
+<p><h5>Owner:</h5> <%= @subcontractor.owner %></p>
+<p><h5>Division: </h5> <%= @subcontractor.division %></p>
+<p><h5>Route:</h5> <%= @subcontractor.route %></p>
+<p><h5>Business License:</h5> <%= @subcontractor.business_license %></p>
+<p><h5>Federal Number:</h5> <%= @subcontractor.federal_number %></p> 
+<p><h5>SCA:</h5> <%= @subcontractor.sca_rec %></p>
+<p><h5>SCA Expiration:</h5> <%= @subcontractor.sca_exp %></p>
+<p><h5>LWA:</h5> <%= @subcontractor.lwa_rec %></p>
+<p><h5>NSQC:</h5> <%= @subcontractor.Nsqc_rec %></p>
+<p><h5>PSQC:</h5> <%= @subcontractor.psqc %></p>
+<p><h5>Bookkeeper:</h5> <%= @subcontractor.bookkeeper %></p>
+<p><h5>Lettstat:</h5> <%= @subcontractor.lettstat %></p>
+<p><h5>Checking Account:</h5><%= @subcontractor.chk_acct %></p>
+<p><h5>Liability Carrier:</h5><%= @subcontractor.liability_carrier %></p>
+<p><h5>Liability Expiration:</h5> <%= @subcontractor.liability_expiration %></p>
+<p><h5>Workman's Comp Carrier:</h5> <%= @subcontractor.wcmp_car %></p>
+<p><h5>Workman's Comp Expiration:</h5> <%= @subcontractor.wcmp_exp %></p>
+<p><h5>Active?</h5> <%= @subcontractor.active ? "yes" : "no" %></p>
+</div>

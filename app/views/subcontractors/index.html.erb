@@ -1,0 +1,30 @@
+<h1>All Subcontractors</h1>
+<br>
+<% if policy(Account.new).create? %>
+<p><%= link_to '<button type="button" class="btn btn-default">Create New Subcontractor</button>'.html_safe, new_subcontractor_path %></p>
+<% end %> 
+<br>
+
+<%= form_tag(subcontractors_path, :method => "get", id: "search-form") do %>
+    <%= text_field_tag :search, params[:search], class: 'form-control', placeholder: "Search Subcontractors" %>
+    <br>
+    <%= submit_tag "Search", :name => nil, class: 'btn btn-success' %>
+<% end %>
+
+<% if @subcontractors.blank? %>
+  <h4>There are no Subcontractors containing the term <%= params[:search] %>.</h4>
+<% end %>
+
+<br>
+
+<% @subcontractors.each do |subcontractor| %>
+  
+  <div class="media">
+     <div class="media-body">
+       <h4 class="media-heading">
+         <p><%= link_to subcontractor.name, subcontractor_path(subcontractor.id) %></p>
+       </h4>
+     </div>
+   </div>
+<% end %>
+<%= will_paginate @subcontractors %>

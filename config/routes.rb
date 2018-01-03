@@ -2,6 +2,7 @@ Rails.application.routes.draw do
  
   devise_for :users
   resources :users
+
  
   resources :accounts do
   	resources :service_comments do
@@ -13,7 +14,7 @@ Rails.application.routes.draw do
     end
   end
 
-
+  resources :subcontractors 
 
   root to: 'welcome#index'
 

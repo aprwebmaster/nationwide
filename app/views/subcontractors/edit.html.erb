@@ -1,0 +1,117 @@
+<h1>Edit Subcontractor</h1>
+
+<div class="row">
+	<div class="col-md-4">
+		<p> Please fill out form completely and accurately. </p>
+		<p> If any issues saving accounts are experienced, please contact your web developer. </p>
+	</div>
+
+	<div class="col-md-8">
+ <%= form_for @subcontractor do |f| %>
+ 	<div class="form-group">
+   <%= f.label "Subcontractor Name" %>
+   <%= f.text_field :name, class: 'form-control', placeholder: "Enter Subcontractor Name" %>
+    </div>
+    <div class="form-group">
+    <%= f.label "Subcontractor Number" %>
+    <%= f.text_field :subcontractor_number %>
+	</div>
+    <div class="form-group">
+    <%= f.label "Owner" %>
+    <%= f.text_field :owner %>
+    </div>
+    <div class="form-group">
+    <%= f.label "Active?" %>
+    <%= f.check_box :active %>
+	</div>
+    <div class="form-group">
+    <%= f.label "Address 1" %>
+    <%= f.text_field :address_1 %>
+	</div> 
+	<div class="form-group">
+    <%= f.label "Address 2" %>
+    <%= f.text_field :address_2 %>
+    </div>
+    <div class="form-group">
+   <%= f.label "City, State, and Zip Code" %>
+   <%= f.text_field :city_state_zip %>
+    </div>
+    <div class="form-group">
+   <%= f.label "Primary Phone Number" %>
+   <%= f.text_field :phone_1 %>
+    </div>
+    <div class="form-group">
+    <%= f.label "Secondary Number" %>
+   <%= f.text_field :phone_2 %>
+   <div class="form-group">
+   <%= f.label "Email Address" %>
+   <%= f.text_field :email_address %>
+   </div>
+   <div class="form-group">
+   <%= f.label "Division"%>
+   <%= f.text_field :division %>
+   </div>
+   <div class="form-group">
+   <%= f.label "Route" %>
+   <%= f.text_field :route %>
+	</div>
+	<div class="form-group"> 
+   <%= f.label "Phone" %>
+   <%= f.text_field :business_license %>
+	</div>
+	<div class="form-group">
+   <%= f.label "Email" %>
+   <%= f.text_field :federal_number %>
+	</div>
+	<div class="form-group">
+   <%= f.label "SCA " %>
+   <%= f.text_field :sca_rec %>
+    </div>
+    <div class="form-group">
+   <%= f.label "SCA Expiration Date" %>
+   <%= f.text_field :sca_exp %>
+	</div>
+	<div class="form-group">
+   <%= f.label "LWA" %>
+   <%= f.text_field :lwa_rec %>
+	</div>
+	<div class="form-group">
+   <%= f.label "NSQC" %>
+   <%= f.text_field :Nsqc_rec %>
+	</div>
+	<div class="form-group">
+   <%= f.label "PSQC" %>
+   <%= f.text_field :psqc %>
+   </div>
+   <div class="form-group">
+   <%= f.label "Bookkeeper" %>
+   <%= f.text_field :bookkeeper %>
+	</div>
+	<div class="form-group">
+   <%= f.label "Lettstat" %>
+   <%= f.text_field :lettstat %>
+   </div>
+   <div class="form-group">
+   <%= f.label "Checking Account" %>
+   <%= f.text_field :chk_acct %>
+   </div>
+   <div class="form-group">
+   <%= f.label "Liability Carrier" %>
+   <%= f.text_field :liability_carrier %>
+   </div>
+   <div class="form-group">
+   <%= f.label "Liability Expiration" %>
+   <%= f.text_field :liability_expiration %>
+   </div>
+   <div class="form-group">
+   <%= f.label "Workman's Comp Carrier" %>
+   <%= f.text_field :wcmp_car %>
+   </div>
+   <div class="form-group">
+   <%= f.label "Workman's Comp Expiration" %>
+   <%= f.text_field :wcmp_exp %>
+	</div>
+ 	<div class="form-group">
+   <%= f.submit "Save", class: 'btn btn-success' %>
+ </div>
+ <% end %>
