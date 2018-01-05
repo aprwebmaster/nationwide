@@ -21,6 +21,9 @@
          <% if policy(Account.new).create? %>
         <li><%= link_to "Subcontractors", subcontractors_path %> </li>
         <% end %>
+         <% if policy(Account.new).create? %>
+        <li><%= link_to "Calendar", meetings_path %> </li>
+        <% end %>
 
         <div class="pull-right user-info">
            <% if current_user %>

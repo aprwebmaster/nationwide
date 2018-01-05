@@ -1,0 +1,61 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Scheduled Events</h1>
+
+<table style="border-spacing: 20px;">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Subcontractor</th>
+      <th>Start time</th>
+      <th>End time</th>
+      <td colspan="3"></td>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @meetings.each do |meeting| %>
+      <tr>
+        <td><%= meeting.name %> &nbsp; &nbsp;</td>
+        <td><%= meeting.subcontractor %> &nbsp; &nbsp;</td>
+        <td><%= meeting.start_time %> &nbsp; &nbsp;</td>
+        <td><%= meeting.end_time %> &nbsp; &nbsp;</td>
+        <% if policy(Account.new).create? %>
+        <td><%= link_to 'Show', meeting %> &nbsp;</td>
+        <% end %>
+        <% if policy(Account.new).create? %>
+        <td><%= link_to 'Edit', edit_meeting_path(meeting) %> &nbsp;</td>
+        <% end %>
+        <% if policy(Account.new).create? %>
+        <td><%= link_to 'Destroy', meeting, method: :delete, data: { confirm: 'Are you sure?' } %> &nbsp;</td>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= will_paginate @meetings %>
+<br>
+
+<%= form_tag(meetings_path, :method => "get", id: "search-form") do %>
+    <%= text_field_tag :search, params[:search], class: 'form-control', placeholder: "Search Events by Subcontractor" %>
+    <br>
+    <%= submit_tag "Search", :name => nil, class: 'btn btn-success' %>
+<% end %>
+
+<% if @meetings.blank? %>
+  <h4>There are no Events containing the term <%= params[:search] %>. Please check spelling and try again. </h4>
+<% end %>
+
+<br>
+
+<%= link_to 'New Event', new_meeting_path %>
+<br>&nbsp;<br>
+<%= month_calendar events: @meetings do |date, meetings| %>
+  <%= date %>
+
+  <% meetings.each do |meeting| %>
+    <div>
+      <b><em>Event: <%= meeting.name %> &nbsp; <br> Sub: <%= meeting.subcontractor %> </em></b>
+    </div>
+  <% end %>
+<% end %>
