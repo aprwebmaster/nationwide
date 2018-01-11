@@ -1,0 +1,10 @@
+<h1>All Stores</h1>
+ <% @stores.each do |store| %>
+   <div class="media">
+     <div class="media-body">
+       <h4 class="media-heading">
+         <%= link_to store.name, store %>
+       </h4>
+     </div>
+   </div>
+   <% end %>

@@ -1,5 +1,5 @@
 
-<div class="row">
+<div class=".col-md-8">
 <div>
 <h2> Account Name: <%= @account.name %></h2>
 <% if policy(Account.new).create? %>
@@ -49,26 +49,52 @@
 <p><h5>Grand Opening?</h5> <%= @account.contracted_services_grandopening ? "yes" : "no" %></p>
 <p><h5>Half Strip?</h5> <%= @account.contracted_services_halfstrip ? "yes" : "no" %></p>
 </div>
-  <div >
+<div>
+ <hr>
+ <div class="row">
+   <h2>Stores</h2>
+
+   <% @all_stores.each do |store| %>
+  
+  <div class="media">
+     <div class="media-body">
+       <h4 class="media-heading">
+         <p><%= link_to store.name, account_stores_path(store.id) %></p>
+       </h4>
+     </div>
+   </div>
+<% end %>
+
+   
+     <%= render @stores %>
+     <%= will_paginate @stores %>
+     <%= render 'stores/form', store: @store, account: @account %>
+    
+  </div> 
+ <hr>
+
  
+  <div class="row">
    <h2>Comments</h2>
   
      <%= render @service_comments %>
      <%= will_paginate @service_comments %>
      <%= render 'service_comments/form', service_comment: @service_comment, account: @account %>
-     
+  
   </div>
+ <hr>
 
 
-  <div >
 
+  <div class="row">
    <h2>Service Records</h2>
    
    	 <%= render @service_records %>
      <%= will_paginate @service_records %>
      <%= render 'service_records/form', service_record: @service_record, account: @account %>
-     
+
     </div>
- 
+    <hr>
+ </div>
 
 </div>

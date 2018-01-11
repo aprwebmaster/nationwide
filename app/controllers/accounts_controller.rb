@@ -17,6 +17,10 @@ class AccountsController < ApplicationController
     @service_comment = @account.service_comments.build 
     @service_records = @account.service_records.paginate(page: params[:page], per_page: 5).order('created_at DESC')
     @service_record = @account.service_records.build 
+    @stores = @account.stores.paginate(page: params[:page], per_page: 5).order('created_at DESC')
+    @store = @account.stores.build
+    @all_stores = @account.stores.all.order('created_at DESC')
+
 
   end
 

@@ -1,0 +1,46 @@
+<h1>Edit Store </h1>
+<div class="row">
+	<div class="col-md-4">
+		<p> Please fill out form completely and accurately. </p>
+		<p> If any issues saving accounts are experienced, please contact your web developer </p>
+	</div>
+
+	<div class="col-md-8">
+ <%= form_for @account do |f| %>
+ 	<div class="form-group">
+   <%= f.label "Store Name" %>
+   <%= f.text_field :name, class: 'form-control', placeholder: "Enter Store Name" %>
+    </div>
+    <div class="form-group">
+    <%= f.label "Code" %>
+    <%= f.text_field :code %>
+	</div>
+    <div class="form-group">
+    <%= f.label "Manager" %>
+    <%= f.text_field :manager %>
+    </div>
+    <div class="form-group">
+    <%= f.label "Active?" %>
+    <%= f.check_box :active %>
+	</div>
+    <div class="form-group">
+    <%= f.label "Phone Number" %>
+    <%= f.text_field :phone_number %>
+	</div> 
+    <div class="form-group">
+    <%= f.label "Region" %>
+    <%= f.text_field :region %>
+    </div> 
+    <div class="form-group">
+    <%= f.label "District" %>
+    <%= f.text_field :district %>
+    </div> 
+    <div class="form-group">
+    <%= f.label "Chain" %>
+    <%= f.text_field :chain %>
+    </div> 
+	
+ 	<div class="form-group">
+   <%= f.submit "Save", class: 'btn btn-success' %>
+ 	<% end %>
+	</div>

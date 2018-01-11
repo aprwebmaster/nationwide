@@ -15,7 +15,14 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :accounts do
+    resources :stores do
+    end
+  end
+
   resources :subcontractors 
+  resources :stores
+  resources :service_records
 
   root to: 'welcome#index'
 

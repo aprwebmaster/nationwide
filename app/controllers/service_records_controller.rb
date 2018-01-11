@@ -1,6 +1,7 @@
 class ServiceRecordsController < ApplicationController
   def index
-    @service_records = ServiceRecord.all 
+    @service_records = ServiceRecord.order('created_at DESC').paginate(page: params[:page], per_page: 10)
+    
   end
 
   def show
