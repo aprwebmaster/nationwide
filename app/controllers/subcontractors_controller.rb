@@ -22,7 +22,7 @@ class SubcontractorsController < ApplicationController
 
   def create
     @subcontractor = Subcontractor.new(params.require(:subcontractor).permit(:name, :subcontractor_number, :owner, :address_1, :address_2, :city_state_zip,
-     :phone_1, :phone_2, :email_address, :division, :route, :active, :business_license, :federal_number, :sca_rec, :sca_exp, :lwa_rec, :Nsqc_rec, :psqc, :bookkeeper,
+     :phone_number, :email_address, :division, :route, :active, :business_license, :federal_number, :sca_rec, :sca_exp, :lwa_rec, :Nsqc_rec, :psqc, :bookkeeper,
      :lettstat, :chk_acct, :liability_carrier, :liability_expiration, :wcmp_car, :wcmp_exp))
    
     if @subcontractor.save
@@ -41,7 +41,7 @@ class SubcontractorsController < ApplicationController
   def update
     @subcontractor = Subcontractor.find(params[:id])
     if @subcontractor.update_attributes(params.require(:subcontractor).permit(:name, :subcontractor_number, :owner, :address_1, :address_2, :city_state_zip,
-     :phone_1, :phone_2, :email_address, :division, :route, :active, :business_license, :federal_number, :sca_rec, :sca_exp, :lwa_rec, :Nsqc_rec, :psqc, :bookkeeper,
+     :phone_number, :email_address, :division, :route, :active, :business_license, :federal_number, :sca_rec, :sca_exp, :lwa_rec, :Nsqc_rec, :psqc, :bookkeeper,
      :lettstat, :chk_acct, :liability_carrier, :liability_expiration, :wcmp_car, :wcmp_exp))
     flash[:notice] = "Subcontractor was updated."
     redirect_to @subcontractor

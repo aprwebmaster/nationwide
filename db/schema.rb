@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180111193114) do
+ActiveRecord::Schema.define(version: 20180112233957) do
 
   create_table "accounts", force: :cascade do |t|
     t.string "name"
@@ -168,6 +168,7 @@ ActiveRecord::Schema.define(version: 20180111193114) do
     t.string "wcmp_exp"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "phone_number"
   end
 
   create_table "users", force: :cascade do |t|
