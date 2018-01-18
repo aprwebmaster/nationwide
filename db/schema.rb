@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180112233957) do
+ActiveRecord::Schema.define(version: 20180118174053) do
 
   create_table "accounts", force: :cascade do |t|
     t.string "name"
@@ -141,7 +141,7 @@ ActiveRecord::Schema.define(version: 20180112233957) do
 
   create_table "subcontractors", force: :cascade do |t|
     t.string "name"
-    t.integer "subcontractor_number"
+    t.string "subcontractor_number"
     t.string "owner"
     t.string "address_1"
     t.string "address_2"
