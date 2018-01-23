@@ -7,6 +7,7 @@
     <tr>
       <th>Name</th>
       <th>Subcontractor</th>
+      <th>Division &nbsp; &nbsp;</th>
       <th>Start time</th>
       <th>End time</th>
       <td colspan="3"></td>
@@ -18,6 +19,7 @@
       <tr>
         <td><%= meeting.name %> &nbsp; &nbsp;</td>
         <td><%= meeting.subcontractor %> &nbsp; &nbsp;</td>
+        <td><%= meeting.division %> &nbsp; &nbsp; </td>
         <td><%= meeting.start_time %> &nbsp; &nbsp;</td>
         <td><%= meeting.end_time %> &nbsp; &nbsp;</td>
         <% if policy(Account.new).create? %>
@@ -37,7 +39,7 @@
 <br>
 
 <%= form_tag(meetings_path, :method => "get", id: "search-form") do %>
-    <%= text_field_tag :search, params[:search], class: 'form-control', placeholder: "Search Events by Subcontractor" %>
+    <%= text_field_tag :search, params[:search], class: 'form-control', placeholder: "Search Events by Subcontractor of Division" %>
     <br>
     <%= submit_tag "Search", :name => nil, class: 'btn btn-success' %>
 <% end %>
@@ -55,7 +57,7 @@
 
   <% meetings.each do |meeting| %>
     <div>
-      <b><em>Event: <%= meeting.name %> &nbsp; <br> Sub: <%= meeting.subcontractor %> </em></b>
+      <b><em>Event: <%= meeting.name %> &nbsp; <br> Sub: <%= meeting.subcontractor %> &nbsp; Division: <%= meeting.division %> &nbsp; </em></b>
     </div>
   <% end %>
   

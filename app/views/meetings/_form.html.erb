@@ -22,6 +22,11 @@
   </div>
 
   <div class="field">
+    <%= form.label :division %>
+    <%= form.text_field :division, id: :meeting_division %>
+  </div>
+
+  <div class="field">
     <%= form.label :start_time %>
     <%= form.datetime_select :start_time, id: :meeting_start_time %>
   </div>
