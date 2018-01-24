@@ -12,6 +12,9 @@ class SubcontractorsController < ApplicationController
 
   def show
   	@subcontractor = Subcontractor.find(params[:id])
+    @all_employees = @subcontractor.employees.all.order('created_at DESC')
+    @employees = @subcontractor.employees.paginate(page: params[:page], per_page: 5).order('created_at DESC')
+    @employee = @subcontractor.employees.build
   end
 
   def new

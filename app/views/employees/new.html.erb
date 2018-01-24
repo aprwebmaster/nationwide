@@ -1,0 +1,43 @@
+<h1>Create New Employee </h1>
+<div class="row">
+    <div class="col-md-4">
+        <p> Please fill out form completely and accurately. </p>
+        <p> If any issues saving service records are experienced, please contact your web developer. </p>
+    </div>
+
+    <div class="col-md-8">
+ <%= form_for @subcontractor do |f| %>
+    <div class="form-group">
+   <%= f.label "Name" %>
+   <%= f.text_field :name, class: 'form-control', placeholder: "Enter Employee Name" %>
+    </div>
+    <div class="form-group">
+    <%= f.label "Employee Number" %>
+    <%= f.text_field :employee_number class: 'form-control', placeholder: "Enter Employee Number" %>
+    </div>
+    <div class="form-group">
+    <%= f.label "Email Address" %>
+    <%= f.text_field :email_address class: 'form-control', placeholder: "Enter Emnail Address"%>
+    </div>
+    <div class="form-group">
+    <%= f.label "Division" %>
+    <%= f.text_field :division, class: 'form-control', placeholder: "Enter Division" %>
+    </div>
+    <div class="form-group">
+    <%= f.label "Phone Number" %>
+    <%= f.text_field :phone_number class: 'form-control', placeholder: "Enter Phone Number" %>
+    </div>
+    <div class="form-group">
+    <%= f.label "SSN" %>
+    <%= f.text_field :ssn class: 'form-control', placeholder: "Enter Social Security Number" %>
+    </div> 
+    <div class="form-group">
+    <%= f.label "License Number" %>
+    <%= f.text_field :license_number class: 'form-control', placeholder: "Enter License Number" %>
+    </div> 
+    
+    <div class="form-group">
+   <%= f.submit "Save", class: 'btn btn-success' %>
+    <% end %>
+    </div>
+

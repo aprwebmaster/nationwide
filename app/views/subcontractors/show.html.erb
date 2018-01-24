@@ -33,3 +33,25 @@
 <p><h5>Workman's Comp Expiration:</h5> <%= @subcontractor.wcmp_exp %></p>
 <p><h5>Active?</h5> <%= @subcontractor.active ? "yes" : "no" %></p>
 </div>
+
+<div class="row">
+   <h2>Employees</h2>
+
+   <% @all_employees.each do |employee| %>
+  
+  <div class="media">
+     <div class="media-body">
+       <h4 class="media-heading">
+         <p><%= link_to employee.name, subcontractor_employees_path(employee.id) %></p>
+       </h4>
+     </div>
+   </div>
+<% end %>
+
+   
+     <%= render @employees %>
+     <%= will_paginate @employees %>
+     <%= render 'employees/form', employee: @employee, subcontractor: @subcontractor %>
+    
+  </div> 
+ <hr>

@@ -20,7 +20,11 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :subcontractors 
+  resources :subcontractors do
+    resources :employees do
+    end
+  end
+  
   resources :stores
   resources :service_records
 

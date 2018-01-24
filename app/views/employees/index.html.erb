@@ -1,0 +1,11 @@
+<h1>All Employees </h1>
+ <% @employees.each do |employee| %>
+   <div class="media">
+     <div class="media-body">
+       <h4 class="media-heading">
+         <%= link_to employee.name, employee %>
+       </h4>
+     </div>
+   </div>
+   <% end %>
+   <%= will_paginate @employees %>

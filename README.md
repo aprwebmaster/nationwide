@@ -18,6 +18,10 @@ Developed by:
 Christopher Bradford, Software Administrator 
 email: cbradford@apr.com 
 
+ruby version: 2.3.4
+
+rails version: 5.1
+
 Please contact with bugs, errors or feature requests. 
 
 

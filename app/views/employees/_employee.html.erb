@@ -1,0 +1,18 @@
+<% if employee.subcontractor %>
+   <div>
+    <% if policy(Account.new).destroy? %>
+   	<%= link_to "Delete Employee", [@subcontractor, employee], method: :delete, class: 'btn btn-danger', data: { confirm: 'Are you sure you want to delete this employee?' } %>
+    <% end %>
+   	 <p><h5> Name: <%= employee.name %></h5></p>
+      <p><h5>Employee Number:</h5> <%= employee.employee_number %></p>
+      <p><h5>Email Address:</h5> <%= employee.email_address %></p>
+      <p><h5>Division:</h5> <%= employee.division %></p>
+      <p><h5>Phone Number:</h5> <%= employee.phone_number %></p>
+      <p><h5>SSN:</h5> <%= employee.ssn %></p>
+      <p><h5> License Number:</h5> <% employee.license_number%> </p>
+     <small>
+       <em><%= employee.subcontractor.name || employee.subcontractor.email %> </em>
+     </small>
+   <% end %>
+   <hr/>
+ </div>
