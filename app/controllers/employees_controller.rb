@@ -41,7 +41,7 @@ def index
   private
 
   def employee_params 
-    params.require(:employee).permit(:name, :employee_number, :ssn, :email_address, :phone_number, :license_number)
+    params.require(:employee).permit(:name, :employee_number, :ssn, :email_address, :phone_number, :license_number, :phone)
   end
 
 end
