@@ -29,7 +29,7 @@ class StoresController < ApplicationController
 
   
   def edit
-    @account = Account.find(params[:account_id])
+
   end
 
   def destroy
@@ -47,7 +47,7 @@ end
   private 
 
   def store_params
-    params.require(:store).permit(:name, :chain, :code, :phone, :manager, :store, :region, :district, :active)
+    params.require(:store).permit(:name, :chain, :code, :phone, :manager, :store, :region, :district, :active, :phone_number)
   end
 
 
