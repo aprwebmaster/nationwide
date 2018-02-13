@@ -6,10 +6,10 @@
     </div>
 
     <div class="col-md-8">
- <%= form_for @account do |f| %>
+ <%= form_for @store do |f| %>
     <div class="form-group">
    <%= f.label "Store" %>
-   <%= f.text_field :store, class: 'form-control', placeholder: "Enter Store Name" %>
+   <%= f.text_field :store_name, class: 'form-control', placeholder: "Enter Store Name" %>
     </div>
     <div class="form-group">
     <%= f.label "Date" %>

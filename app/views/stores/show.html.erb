@@ -1,8 +1,6 @@
 <h2> Store: <%= @store.name %></h2>
 
 
-<%= link_to "Edit", edit_store_path(@store), class: 'btn btn-success' %>
-
 <p><h5>Store Code:</h5> <%= @store.code %></p>
 <p><h5>Store Phone:</h5> <%= @store.phone_number%></p>
 <p><h5>Store Manager:</h5> <%= @store.manager %></p>
@@ -10,4 +8,16 @@
 <p><h5>District:</h5> <%= @store.district %></p>
 <p><h5>Chain:</h5> <%= @store.chain %></p>
 
+
+
+  <div class="row">
+   <h2>Service Records</h2>
+   
+   	 <%= render @service_records %>
+     <%= will_paginate @service_records %>
+     <%= render 'service_records/form', service_record: @service_record, store: @store %>
+
+    </div>
+    <hr>
+ </div>
 

@@ -10,14 +10,16 @@ Rails.application.routes.draw do
   	end
   end
 
-  resources :accounts do 
-    resources :service_records do
-    end
-  end
+ 
 
   resources :accounts do
     resources :stores do
     end
+  end
+
+  resources :stores do
+    resources :service_records do
+      end
   end
 
   resources :subcontractors do
@@ -25,6 +27,7 @@ Rails.application.routes.draw do
     end
   end
   
+  resources :employees 
   resources :stores
   resources :service_records
 

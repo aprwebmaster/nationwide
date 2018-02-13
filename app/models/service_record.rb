@@ -1,6 +1,6 @@
 class ServiceRecord < ApplicationRecord
-  belongs_to :account
+  belongs_to :store 
   
   
-  validates :account_id, presence: true 
+  validates :store_id, presence: true 
 end

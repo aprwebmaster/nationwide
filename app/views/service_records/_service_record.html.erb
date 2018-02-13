@@ -1,7 +1,7 @@
-<% if service_record.account %>
+<% if service_record.store %>
    <div>
     <% if policy(Account.new).destroy? %>
-   	<%= link_to "Delete Service Record", [@account, service_record], method: :delete, class: 'btn btn-danger', data: { confirm: 'Are you sure you want to delete this service record?' } %>
+   	<%= link_to "Delete Service Record", [@store, service_record], method: :delete, class: 'btn btn-danger', data: { confirm: 'Are you sure you want to delete this service record?' } %>
     <% end %>
    	 <h5> Store: <%= service_record.store %></h5>
       <p><h5>Service Record Date:</h5> <%= service_record.date %></p>
@@ -11,7 +11,7 @@
       <p><h5>Record Text:</h5> <%= service_record.body %></p>
       <p><h5> Report in?</h5> <% service_record.report_in ? "yes" : "no" %> </p>
      <small>
-       <em><%= service_record.account.name || service_record.account.email %> </em>
+       <em><%= service_record.store.name || service_record.store.email %> </em>
      </small>
    <% end %>
    <hr/>

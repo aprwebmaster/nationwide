@@ -5,6 +5,8 @@ class StoresController < ApplicationController
 
   def show
     @store = Store.find(params[:id]) 
+    @service_records = @store.service_records.paginate(page: params[:page], per_page: 5).order('created_at DESC')
+    @service_record = @store.service_records.build 
   end
 
   def create
@@ -27,12 +29,12 @@ class StoresController < ApplicationController
 
   
   def edit
-
+    @account = Account.find(params[:account_id])
   end
 
   def destroy
     @account = Account.find(params[:account_id])
-    @store = @account.store.find(params[:id])
+    @store = @account.stores.find(params[:id])
   if @store.destroy 
     flash[:notice] = "Store was deleted successfully."
     redirect_to @account
