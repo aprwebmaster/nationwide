@@ -22,8 +22,61 @@
     </div>
     <div class="form-group">
     <%= f.label "Service Type" %>
+    <p> Please select from the following service types and enter below: 
+        <ul>
+            <li>1 Basic</li>
+            <li>2 Front Strip</li>
+            <li>3 Back Strip</li>
+            <li> 4 Extraction</li>
+            <li>5 Scrub</li>
+            <li>6 Back Scrub</li>
+            <li> Windows</li>
+            <li>8 Grand Opening</li>
+            <li>9 ½ Strip</li>
+            <li>10 Other</li>
+            <li>11 Corrective Basic</li>
+            <li>12 Corrective Front Strip</li>
+            <li>13 Corrective Back Strip</li>
+            <li>14 Corrective Extraction</li>
+            <li>15 Corrective Scrub</li>
+            <li>16 Corrective Buff</li>
+            <li>17 Corrective Windows</li>
+            <li>18 P-Wash</li>
+            <li>19 Construction Clean Up</li>
+            <li>20 Store Miss</li>
+            <li>21 Store Canceled</li>
+            <li>22 We Canceled</li>
+            <li>23 We Missed </li>
+            <li>24 AWOL </li>
+            <li>25 Vehicle Problems</li>
+            <li>26 Refurbish </li>
+            <li>27     Partial Refurbish</li>
+            <li>28     Support Area Strip</li>
+        </ul>
+    </p>
     <%= f.text_field :service_type, class: 'form-control', placeholder: "Enter Service Type" %>
 	</div>
+    <div class="form-group">
+    <%= f.label "Frequency" %>
+    <p> Please enter the frequency for each service type input above. For example, '1 - weekly, 2 - annually, 4 - daily' if there are multiple service types. </p>
+    <%= f.text_field :frequency, class: 'form-control', placeholder: "Enter Frequency" %>
+    </div>
+    <div class="form-group">
+    <%= f.label "Service Price - Contractor" %>
+    <p> Please enter the Contractor service price for each service type.  For example ' 1 - $3400, 2 - $12,000'
+    <%= f.text_field :sp_sub, class: 'form-control', placeholder: "Enter Service Price for Contractor" %>
+    </div>
+    <div class="form-group">
+    <%= f.label "Service Price - Corporate" %>
+    <p> Please enter the Corporate service price for each service type.  For example ' 1 - $3400, 2 - $12,000'
+    <%= f.text_field :sp_corp, class: 'form-control', placeholder: "Enter Service Price for Corporate" %>
+    </div>
+    <div class="form-group">
+    <%= f.label "Square Footage and Floor Type" %>
+    <p> Please enter the square footage of the store and the floor type worked upon. For example ' 1400 sq ft - linoleum'
+    <%= f.text_field :square_footage, class: 'form-control', placeholder: "Enter Square Footage and Floor Type" %>
+    </div>
+
 	<div class="form-group">
     <%= f.label "Report In?" %>
     <%= f.check_box :report_in, class: 'form-control' %>
