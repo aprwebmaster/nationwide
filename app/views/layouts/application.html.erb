@@ -16,6 +16,9 @@
         <li><%= link_to "Accounts", accounts_path %> </li>
         <% end %>
         <% if policy(Account.new).create? %>
+        <li><%= link_to "Stores", stores_path %> </li>
+        <% end %>
+        <% if policy(Account.new).create? %>
         <li><%= link_to "Service Records", service_records_path %> </li>
         <% end %>
         <% if policy(Account.new).create? %>
