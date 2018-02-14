@@ -43,7 +43,7 @@ class ServiceRecordsController < ApplicationController
   private
 
   def service_record_params 
-    params.require(:service_record).permit(:manager, :date, :service_type, :report_in, :store_name, :subcontractor, :body, :square_footage, :frequency, :sp_sub, :sp_corp)
+    params.require(:service_record).permit(:manager, :date, :service_type, :report_in, :store_name, :subcontractor, :body, )
   end
 
 end
