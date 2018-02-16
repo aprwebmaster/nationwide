@@ -47,7 +47,7 @@ end
   private 
 
   def store_params
-    params.require(:store).permit(:name, :chain, :code, :phone, :manager, :store, :region, :district, :active, :phone_number, :square_footage, :frequency, :sp_sub, :sp_corp)
+    params.require(:store).permit(:name, :chain, :code, :phone, :manager, :store, :region, :district, :active, :phone_number, :square_footage, :frequency, :sp_sub, :sp_corp, :address, :zipcode, :state)
   end
 
 

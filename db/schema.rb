@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180214000412) do
+ActiveRecord::Schema.define(version: 20180216201549) do
 
   create_table "accounts", force: :cascade do |t|
     t.string "name"
@@ -151,6 +151,8 @@ ActiveRecord::Schema.define(version: 20180214000412) do
     t.string "sp_sub"
     t.string "sp_corp"
     t.string "service_type"
+    t.string "zipcode"
+    t.string "state"
     t.index ["account_id"], name: "index_stores_on_account_id"
     t.index ["service_records_id"], name: "index_stores_on_service_records_id"
   end
