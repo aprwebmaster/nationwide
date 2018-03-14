@@ -1,6 +1,12 @@
 class StoresController < ApplicationController
   def index
-  	@stores = Store.all 
+  	@stores = Store.order(:name).paginate(page: params[:page], per_page: 10)
+
+    if params[:search]
+      @stores = Store.search(params[:search]).order(:name).paginate(page: params[:page], per_page: 10)
+    else
+      @stores = Store.order(:name).paginate(page: params[:page], per_page: 10)
+    end
   end
 
   def show
@@ -29,8 +35,20 @@ class StoresController < ApplicationController
 
   
   def edit
-
+    @store = Store.find(params[:id])
   end
+
+  def update
+    @store = Store.find(params[:id])
+    
+    if @store.update_attributes(params.require(:store).permit(:name, :chain, :code, :phone, :manager, :store, :region, :district, :active, :phone_number, :square_footage, :frequency, :sp_sub, :sp_corp, :address, :zipcode, :state, :city))
+    flash[:notice] = "Store was updated."
+    redirect_to @store
+  else
+    flash[:error] = "There was an error saving this store. Please try again."
+    render :edit
+  end
+end
 
   def destroy
     @account = Account.find(params[:account_id])

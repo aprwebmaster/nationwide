@@ -1,4 +1,10 @@
 <h2> Store: <%= @store.name %></h2>
+<% if policy(Account.new).create? %>
+<%= link_to "Edit", edit_store_path(@store), class: 'btn btn-success' %>
+<% end %>
+<% if policy(Account.new).destroy? %>
+ <%= link_to "Delete Store", @store, method: :delete, class: 'btn btn-danger', data: { confirm: 'Are you sure you want to delete this store?' } %>
+<% end %> 
 
 
 <p><h5>Store Code:</h5> <%= @store.code %></p>

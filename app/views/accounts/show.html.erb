@@ -59,16 +59,13 @@
   <div class="media">
      <div class="media-body">
        <h4 class="media-heading">
-         <p><%= link_to store.name, account_stores_path(store.id) %></p>
+         <p><%= link_to store.name, store_path(store.id) %></p>
        </h4>
      </div>
    </div>
 <% end %>
 
    
-     <%= render @stores %>
-     <%= will_paginate @stores %>
-     <%= render 'stores/form', store: @store, account: @account %>
     
   </div> 
  <hr>

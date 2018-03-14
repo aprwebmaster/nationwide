@@ -11,7 +11,7 @@
       <p><h5>Record Text:</h5> <%= service_record.body %></p>
       <p><h5> Report in?</h5> <% service_record.report_in ? "yes" : "no" %> </p>
      <small>
-       <em><%= service_record.store.name || service_record.store.email %> </em>
+       <em><%= service_record.store.name || service_record.store.email || service_record.store.phone %> </em>
      </small>
    <% end %>
    <hr/>
