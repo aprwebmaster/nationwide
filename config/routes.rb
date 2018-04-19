@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
  
+
   resources :meetings
   devise_for :users
   resources :users
@@ -30,6 +31,7 @@ Rails.application.routes.draw do
   resources :employees 
   resources :stores
   resources :service_records
+  resources :calendar 
 
   root to: 'welcome#index'
 
