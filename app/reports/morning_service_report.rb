@@ -5,7 +5,7 @@ class MorningServiceReport < Dossier::Report
 		#'SELECT * FROM subcontractors WHERE created_at BETWEEN datetime("now", "start of day") AND datetime("now", "localtime");'
 
 		#this query displays the previous days service report
-		'SELECT * FROM service_records WHERE created_at >= date("now", "-1 days") AND created_at <  date("now")'
+		'SELECT * FROM service_records WHERE service_records.created_at > current_date - 1 '
 	end
 
 
